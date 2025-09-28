@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { LogOut } from "lucide-react";
+import NavItems from "./NavItems";
 
 const UserDropdown = () => {
   const router = useRouter();
@@ -68,6 +69,10 @@ const UserDropdown = () => {
           <LogOut className="w-4 h-4 mr-2 hidden sm:block" />
           Logout
         </DropdownMenuItem>
+        <DropdownMenuSeparator className="hidden sm:block bg-gray-600" />
+        <nav className="sm:hidden">
+          <NavItems />
+        </nav>
       </DropdownMenuContent>
     </DropdownMenu>
   );
